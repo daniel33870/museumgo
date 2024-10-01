@@ -303,7 +303,7 @@ body.dark .switch::before {
 
   .home {
     position: relative;
-    left: -30%;
+    left: -60%;
     width: 100%;
     top: 30px; /* Ajusta el top para que el contenido no se oculte debajo de la sidebar */
   }
