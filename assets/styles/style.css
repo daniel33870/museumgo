@@ -291,10 +291,10 @@ body.dark .switch::before {
 /* ... (tu código CSS existente) ... */
 
 /* Responsividad para la sidebar */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   /* Ajusta el ancho según tu preferencia */
   .sidebar {
-    width: 50%; /* Ocupa todo el ancho en pantallas pequeñas */
+    width: 60%; /* Ocupa todo el ancho en pantallas pequeñas */
     position: fixed;
     top: 0;
     left: 0;
