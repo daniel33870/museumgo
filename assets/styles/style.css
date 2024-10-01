@@ -270,7 +270,6 @@ body.dark .switch::before {
 .home {
   position: relative;
   left: 250px;
-
   height: 100vh;
   width: calc(100% - 88px);
   background: var(--body-color);
@@ -287,4 +286,25 @@ body.dark .switch::before {
 .sidebar.close ~ .home {
   left: 88px;
   width: calc(100% - 88px);
+}
+
+/* ... (tu código CSS existente) ... */
+
+/* Responsividad para la sidebar */
+@media (max-width: 768px) {
+  /* Ajusta el ancho según tu preferencia */
+  .sidebar {
+    width: 40%; /* Ocupa todo el ancho en pantallas pequeñas */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+
+  .home {
+    position: relative;
+    left: 0;
+    width: 100%;
+    top: 20px; /* Ajusta el top para que el contenido no se oculte debajo de la sidebar */
+  }
 }
