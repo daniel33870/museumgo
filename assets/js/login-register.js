@@ -1,9 +1,9 @@
 const inputs = document.querySelectorAll(".input-field");
-const toggle_btn = document.querySelectorAll(".toggle");
-const main = document.querySelector("main");
+const toggle_btn = document.querySelectorAll(".toggle-form");
+const main = document.querySelector(".main");
 
 const bullets = document.querySelectorAll(".bullets span"),
-      images = document.querySelectorAll(".image");
+      images = document.querySelectorAll(".image-form");
 
 inputs.forEach(inp => {
     inp.addEventListener("focus", () => {
@@ -39,3 +39,4 @@ function moveSlider() {
 bullets.forEach((bullet) => {
     bullet.addEventListener("click", moveSlider);
 })
+
