@@ -15,6 +15,8 @@
   --toggle-color: #adacac;
   --text-color: #000000;
   --text-secondary-color: #3b3b3b;
+  --icono-color: #080808;
+  --icono-secondary-color: #695cfe;
 
   --tran-02: all 0.2s ease;
   --tran-03: all 0.3s ease;
@@ -36,6 +38,8 @@ body.dark {
   --toggle-color: #fff;
   --text-color: #ccc;
   --text-secondary-color: #9f9e9e;
+  --icono-color: #ffffff;
+  --icono-secondary-color: #4c42b8;
 }
 /* ==== Sidebar ==== */
 .sidebar {
@@ -472,6 +476,8 @@ body.dark .switch::before {
   font-size: 15px;
   padding-right: 15px;
   text-transform: uppercase;
+  text-align: center;
+  color: var(--text-color);
 }
 
 .cta svg {
@@ -487,27 +493,47 @@ body.dark .switch::before {
 .cta:active svg {
   transform: scale(0.9);
 }
-
-.hover-underline-animation {
+.loader-shape-3 {
   position: relative;
-  color: var(--text-color);
-  padding-bottom: 20px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
 }
-
-.hover-underline-animation:after {
-  content: "";
+.loader-shape-3:after {
+  width: 30px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: var(--icono-secondary-color); /* Color secundario */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 15px;
+}
+.loader-shape-3:before {
+  width: 20px;
+  height: 20px;
+  border-radius: 100% 100% 100% 0;
+  box-shadow: 0px 0px 0px 2px var(--icono-color); /* Color principal */
+  animation: anm-SL-3-move 1s linear infinite;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-46deg);
+  margin-top: 20px;
+}
+.loader-shape-3:before,
+.loader-shape-3:after {
   position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: var(--text-color);
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
+  content: "";
 }
-
-.cta:hover .hover-underline-animation:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
+@keyframes anm-SL-3-move {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -5px;
+  }
+  100% {
+    top: 0;
+  }
 }
