@@ -294,7 +294,7 @@ body.dark .switch::before {
 @media (max-width: 768px) {
   /* Ajusta el ancho según tu preferencia */
   .sidebar {
-    width: 40%; /* Ocupa todo el ancho en pantallas pequeñas */
+    width: 50%; /* Ocupa todo el ancho en pantallas pequeñas */
     position: fixed;
     top: 0;
     left: 0;
@@ -305,6 +305,6 @@ body.dark .switch::before {
     position: relative;
     left: 0;
     width: 100%;
-    top: 20px; /* Ajusta el top para que el contenido no se oculte debajo de la sidebar */
+    top: 30px; /* Ajusta el top para que el contenido no se oculte debajo de la sidebar */
   }
 }
