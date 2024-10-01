@@ -50,8 +50,8 @@ body.dark {
   width: 250px;
   padding: 10px 14px;
   background: var(--sidebar-color);
-  transition: var(--tran-05);
-  z-index: 100;
+  transition: var(--tran-03);
+  z-index: 1000;
 }
 
 .sidebar.close {
@@ -498,7 +498,7 @@ body.dark .switch::before {
   display: inline-block;
   width: 50px;
   height: 50px;
-  z-index: 50;
+  z-index: 1;
 }
 .loader-shape-3:after {
   width: 30px;
@@ -508,7 +508,7 @@ body.dark .switch::before {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 40;
+  z-index: 0;
 
   margin-top: 15px;
 }
@@ -520,7 +520,7 @@ body.dark .switch::before {
   animation: anm-SL-3-move 1s linear infinite;
   top: 50%;
   left: 50%;
-  z-index: 80;
+  z-index: 20;
 
   transform: translate(-50%, -50%) rotate(-46deg);
   margin-top: 20px;
