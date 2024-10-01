@@ -294,7 +294,7 @@ body.dark .switch::before {
 @media (max-width: 800px) {
   /* Ajusta el ancho según tu preferencia */
   .sidebar {
-    width: 60%; /* Ocupa todo el ancho en pantallas pequeñas */
+    width: 60%;
     position: fixed;
     top: 0;
     left: 0;
@@ -303,8 +303,211 @@ body.dark .switch::before {
 
   .home {
     position: relative;
-    left: 0;
+    left: -30%;
     width: 100%;
     top: 30px; /* Ajusta el top para que el contenido no se oculte debajo de la sidebar */
   }
+}
+
+/* From Uiverse.io by Kagamiie */
+.museum-info {
+  padding: 100px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  top: -50px;
+}
+
+.museum-title {
+  font-weight: 500;
+  font-size: 1.5em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--text-color);
+}
+
+.lighter {
+  font-size: 0.9em;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tag {
+  font-weight: 700;
+  color: var(--text-colorr);
+  cursor: pointer;
+  transition: 0.6s;
+}
+
+.tag:hover {
+  color: var(--text-color);
+  transform: translateY(2px);
+}
+
+/*DELETE THIS TWO LINE*/
+.delete {
+  background-color: var(--text-secondary-color);
+}
+
+.card-img div {
+  width: 90%;
+}
+/*IF USING IMAGES*/
+
+/* Estilos generales para las tarjetas */
+.card-container {
+  display: grid;
+  gap: 10px;
+  padding: 20px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.card {
+  margin-top: 15px;
+  background-color: var(--primary-color-light);
+  color: var(--text-secondary-color);
+  width: 100%;
+  max-width: 350px;
+  max-height: 350px;
+  border-radius: 8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Efecto al pasar el ratón por encima */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.2) 0px 30px 60px -30px;
+}
+
+.card h3 {
+  font-size: 1.2rem; /* Ajustar tamaño de texto */
+  font-weight: bold;
+}
+
+.card p {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+/* Para pantallas grandes (escritorio) */
+@media (min-width: 1024px) {
+  .card-container {
+    justify-content: space-evenly;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
+  }
+}
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .tag {
+    font-size: 0.9rem;
+  }
+
+  .museum-title {
+    font-size: 1rem;
+  }
+
+  .museum-info {
+    font-size: 1rem;
+  }
+  .card-container {
+    flex-direction: column; /* Alinea las tarjetas en una sola columna */
+    align-items: center;
+    gap: 20px; /* Espaciado entre tarjetas */
+    grid-template-columns: 1fr; /* Una sola columna */
+  }
+}
+
+.card-img {
+  position: relative;
+  top: -20px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  max-width: 320px; /* Hacer las tarjetas un poco más anchas en tablets */
+  margin-bottom: 20px;
+}
+
+/* Change the .card-img div to .card-img img to use img*/
+.card-img a,
+.card-img div {
+  height: 150px;
+  width: 90%;
+  /* Change this width here to change the width of the color/image */
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.card-imgs {
+  transition: all 0.5s;
+}
+
+/* From Uiverse.io by alexmaracinaru */
+.cta {
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.cta span {
+  padding-bottom: 7px;
+  letter-spacing: 4px;
+  font-size: 15px;
+  padding-right: 15px;
+  text-transform: uppercase;
+}
+
+.cta svg {
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+  fill: var(--text-color);
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active svg {
+  transform: scale(0.9);
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: var(--text-color);
+  padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--text-color);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
