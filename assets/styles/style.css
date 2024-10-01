@@ -537,3 +537,13 @@ body.dark .switch::before {
     top: 0;
   }
 }
+
+/* Estilos adicionales para cuando el loader está visible */
+.loader-shape-3.hide {
+  opacity: 0; /* Muestra el loader */
+}
+
+/* Estilos para ocultar el loader */
+.loader-shape-3.show {
+  opacity: 1; /* Oculta el loader */
+}
