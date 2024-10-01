@@ -3,7 +3,7 @@ const toggle_btn = document.querySelectorAll(".toggle-form");
 const main = document.querySelector(".main");
 
 const bullets = document.querySelectorAll(".bullets span"),
-      images = document.querySelectorAll(".image-form");
+      images = document.querySelectorAll(".image");
 
 inputs.forEach(inp => {
     inp.addEventListener("focus", () => {

@@ -74,7 +74,7 @@ input {
 }
 
 .sidebar.close .text {
-  opacity: 0;
+  display: none;
 }
 
 .sidebar .image {
@@ -406,7 +406,7 @@ form.sign-up-form {
 }
 
 .toggle-form {
-  color: var(--text-secondary-color);
+  color: var(--text-color);
   text-decoration: none;
   font-size: 0.75rem;
   font-weight: 500;
@@ -414,7 +414,7 @@ form.sign-up-form {
 }
 
 .toggle-form:hover {
-  color: var(--text-colorr);
+  color: var(--text-secondary-color);
 }
 
 .input-wrap {
@@ -476,11 +476,12 @@ label {
 
 .text-form {
   font-size: 14px;
-  color: var(--text-secondary-color);
+  color: var(--text-color);
 }
 
 .text-form p {
   font-size: 0.7rem;
+  color: var(--text-color);
 }
 
 .text-form a {
@@ -489,7 +490,7 @@ label {
 }
 
 .text-form a:hover {
-  color: var(--toggle-color);
+  color: var(--text-secondary-color);
 }
 
 .main.sign-up-mode form.sign-in-form {

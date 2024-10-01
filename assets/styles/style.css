@@ -68,7 +68,7 @@ body.dark {
 }
 
 .sidebar.close .text {
-  opacity: 0;
+  display: none;
 }
 
 .sidebar .image {
@@ -271,6 +271,13 @@ body.dark .switch::before {
   left: 24px;
 }
 
+.text-1 {
+  pointer-events: none;
+  font-size: 30px;
+  color: var(--text-color);
+  letter-spacing: 1vh;
+  text-align: center;
+}
 .home {
   position: relative;
   left: 88px;
@@ -278,6 +285,7 @@ body.dark .switch::before {
   width: calc(100% - 88px);
   background: var(--body-color);
   transition: var(--tran-05);
+  top: 30px;
 }
 
 .sidebar.close ~ .home {
@@ -297,12 +305,15 @@ body.dark .switch::before {
     left: 0;
     z-index: 100;
   }
+  .text-1 {
+    text-align: center;
+  }
 
   .home {
     position: relative;
     left: -100%;
     width: 100%;
-    top: 30px; /* Ajusta el top para que el contenido no se oculte debajo de la sidebar */
+    top: 10px; /* Ajusta el top para que el contenido no se oculte debajo de la sidebar */
   }
 }
 
@@ -314,9 +325,11 @@ body.dark .switch::before {
   gap: 20px;
   position: relative;
   top: -50px;
+  cursor: pointer;
 }
 
 .museum-title {
+  pointer-events: none;
   font-weight: 500;
   font-size: 1.5em;
   overflow: hidden;
@@ -338,8 +351,8 @@ body.dark .switch::before {
 .tag {
   font-weight: 700;
   color: var(--text-colorr);
-  cursor: pointer;
   transition: 0.6s;
+  cursor: pointer;
 }
 
 .tag:hover {
