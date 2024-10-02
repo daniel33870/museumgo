@@ -492,7 +492,7 @@ body.dark .switch::before {
   .map,
   .address {
     width: 100%; /* Asegurarse de que el mapa y la dirección ocupen todo el ancho */
-    height: auto; /* Ajustar la altura según el contenido */
+    height: 100%; /* Ajustar la altura según el contenido */
   }
 }
 
