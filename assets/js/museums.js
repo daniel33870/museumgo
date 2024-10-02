@@ -56,29 +56,4 @@ window.onclick = function (event) {
 };
 
 
-document.addEventListener("DOMContentLoaded", function () {
-  const mapContainer = document.getElementById("map-container");
-  const modal = document.getElementById("myModal");
-  const modalBody = document.getElementById("modal-body");
 
-  // Cuando se haga clic en el mapa, abre el modal
-  mapContainer.addEventListener("click", function () {
-    modalBody.innerHTML = `
-    <h3>Map Museum</h3>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093746!2d144.95565101586415!3d-37.81732677975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577e3d6d2a8f5b9!2sMelbourne%20Museum!5e0!3m2!1sen!2sau!4v1615516799013!5m2!1sen!2sau"
-        width="100%"
-        height="400px"
-        allowfullscreen=""
-        loading="lazy"
-      ></iframe>`;
-    modal.style.display = "block";
-  });
-
-  // Cierra el modal si el usuario hace clic fuera del contenido del modal
-  window.onclick = function (event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  };
-});

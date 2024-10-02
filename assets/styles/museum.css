@@ -378,7 +378,8 @@ body.dark .switch::before {
   grid-column: span 2;
 }
 
-.image-museum {
+.image-museum,
+.address-map {
   width: 90%;
   height: 90%;
   overflow: hidden;
@@ -421,6 +422,8 @@ body.dark .switch::before {
   grid-template-columns: 1fr 1fr;
   gap: 30px;
   grid-column: span 2;
+  width: 100%;
+  height: 100%;
 }
 
 .address {
@@ -474,7 +477,6 @@ body.dark .switch::before {
   border: none;
   border-radius: 15px; /* Esto asegura que el contenido del iframe también tenga bordes redondeados */
   object-fit: cover;
-  pointer-events: none;
 }
 
 /* Deslizable básico */
