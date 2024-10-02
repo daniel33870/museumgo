@@ -485,12 +485,13 @@ label {
 }
 
 .text-form a {
-  color: var(--text-color);
+  color: var(--text-secondary-color);
   transition: 0.3s;
+  text-decoration: none;
 }
 
 .text-form a:hover {
-  color: var(--text-secondary-color);
+  color: var(--text-color);
 }
 
 .main.sign-up-mode form.sign-in-form {
