@@ -344,7 +344,7 @@ body.dark .switch::before {
   padding-left: 10px;
 }
 
-.image-title {
+.title {
   display: flex;
   gap: 20px;
   justify-content: center;
@@ -352,7 +352,7 @@ body.dark .switch::before {
   grid-column: span 2;
 }
 
-.image {
+.image-museum {
   width: 90%;
   height: 90%;
   overflow: hidden;
@@ -361,11 +361,11 @@ body.dark .switch::before {
   transition: transform 0.3s ease; /* Añadir transición para el efecto de hover */
 }
 
-.image:hover {
+.image-museum:hover {
   transform: scale(1.05); /* Aumentar el tamaño al 105% */
 }
 
-.image img {
+.image-museum img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -471,12 +471,12 @@ body.dark .switch::before {
     padding: 0;
   }
 
-  .image-title {
+  .title {
     flex-direction: column;
     align-items: center;
   }
 
-  .image {
+  .image-museum {
     width: 100%;
     height: auto;
   }
