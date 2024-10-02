@@ -18,12 +18,13 @@
   --icono-color: #080808;
   --icono-secondary-color: #695cfe;
 
-  --bg-color-modal: rgba(207, 206, 206, 0.5);
-
   --tran-02: all 0.2s ease;
   --tran-03: all 0.3s ease;
   --tran-04: all 0.4s ease;
   --tran-05: all 0.5s ease;
+
+  --bg-color: rgba(50, 50, 93, 0.25);
+  --bg-color-sec: rgba(0, 0, 0, 0.3);
 }
 
 body {
@@ -43,7 +44,8 @@ body.dark {
   --icono-color: #ffffff;
   --icono-secondary-color: #4c42b8;
 
-  --bg-color-modal: rgba(0, 0, 0, 0.5);
+  --bg-color: rgba(166, 166, 172, 0.25);
+  --bg-color-sec: rgba(206, 205, 205, 0.3);
 }
 /* ==== Sidebar ==== */
 .sidebar {
@@ -289,12 +291,15 @@ body.dark .switch::before {
   width: calc(100% - 88px);
   background: var(--body-color);
   transition: var(--tran-05);
+  top: 30px;
 }
 
 .sidebar.close ~ .home {
   left: 88px;
   width: calc(100% - 88px);
 }
+
+/* ... (tu código CSS existente) ... */
 
 /* Responsividad para la sidebar */
 @media (max-width: 800px) {
@@ -314,7 +319,28 @@ body.dark .switch::before {
     position: relative;
     left: -100%;
     width: 100%;
-    top: 30px; /* Ajusta el top para que el contenido no se oculte debajo de la sidebar */
+    top: 10px; /* Ajusta el top para que el contenido no se oculte debajo de la sidebar */
+  }
+}
+/* Responsividad para la sidebar */
+@media (max-width: 800px) {
+  /* Ajusta el ancho según tu preferencia */
+  .sidebar {
+    width: 60%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+  .text-1 {
+    text-align: center;
+  }
+
+  .home {
+    position: relative;
+    left: -100%;
+    width: 100%;
+    top: 10px; /* Ajusta el top para que el contenido no se oculte debajo de la sidebar */
   }
 }
 
@@ -570,11 +596,6 @@ body.dark .switch::before {
   .image-title {
     flex-direction: column;
     align-items: center;
-  }
-
-  .image {
-    width: 100%;
-    height: auto;
   }
 
   .info {
