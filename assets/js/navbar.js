@@ -6,7 +6,7 @@ const body = document.querySelector("body"),
     modeText = body.querySelector(".mode-text"),
     loader = body.querySelector(".loader-shape-3");
 
-toggle.addEventListener('click', () => {
+    toggle.addEventListener('click', () => {
     sidebar.classList.toggle("close");
 
     // Verifica el ancho de la pantalla
@@ -18,10 +18,14 @@ toggle.addEventListener('click', () => {
         } else {
             loader.classList.toggle("hide");
             loader.classList.remove("show")
-
         }
     }
 });
+
+searchBtn.addEventListener("click", () => {
+    sidebar.classList.remove("close")
+})
+
 
 modeSwitch.addEventListener('click', () => {
     body.classList.toggle("dark");
