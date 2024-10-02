@@ -64,7 +64,7 @@
           <li class="">
             <a href="../index.html">
               <i class="bx bx-arrow-back icon"></i>
-              <span class="text nav-text">volver</span>
+              <span class="text nav-text">Back</span>
             </a>
           </li>
           <li class="mode">
@@ -82,21 +82,83 @@
     </nav>
 
     <section class="home">
-      <div class="row">
-        <div class="imgWrapper">
-          <img src="../assets/imgs/museo1.jpg" alt="Museum Picture" />
+      <div class="container">
+        <!-- Sección principal -->
+        <div class="main-content">
+          <div class="image-title">
+            <div class="image">
+              <img src="../assets/imgs/museo1.jpg" alt="" class="img-museum" />
+            </div>
+            <div class="info">
+              <div class="title">
+                <h1>MUSEO DE BELLAS ARTES</h1>
+              </div>
+              <div class="category">
+                <h2>Categoría</h2>
+              </div>
+            </div>
+          </div>
+          <div class="address-map">
+            <div class="address">
+              <h3>Dirección</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quaerat, reiciendis.
+              </p>
+            </div>
+            <div class="map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093746!2d144.95565101586415!3d-37.81732677975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577e3d6d2a8f5b9!2sMelbourne%20Museum!5e0!3m2!1sen!2sau!4v1615516799013!5m2!1sen!2sau"
+                width="100%"
+                height="300px"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+          <div class="details">
+            <div class="rooms modal-btn" data-target="salas">
+              <h3>Salas</h3>
+              <div class="carousel">
+                <!-- Aquí colocarás un deslizable para las salas del museo -->
+              </div>
+            </div>
+            <div class="events modal-btn" data-target="eventos">
+              <h3>Eventos</h3>
+              <div class="carousel">
+                <!-- Aquí colocarás un deslizable para los eventos -->
+              </div>
+            </div>
+          </div>
+
+          <div class="details">
+            <div class="hours modal-btn" data-target="horarios">
+              <h3>Horarios</h3>
+              <div class="carousel">
+                <!-- Aquí colocarás un deslizable para los horarios -->
+              </div>
+            </div>
+            <div class="prices modal-btn" data-target="precios">
+              <h3>Precios</h3>
+              <div class="carousel">
+                <!-- Aquí colocarás un deslizable para los precios -->
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="contentWrapper">
-          <div class="content">
-            <h2>MUSEO</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-              numquam porro dolore soluta.
-            </p>
+      </div>
+
+      <!-- Modal -->
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div id="modal-body">
+            <!-- Aquí se mostrará el contenido del modal -->
           </div>
         </div>
       </div>
     </section>
     <script src="../assets/js/navbar.js"></script>
+    <script src="../assets/js/museums.js"></script>
   </body>
 </html>
