@@ -438,6 +438,22 @@ body.dark .switch::before {
     gap: 20px; /* Espaciado entre tarjetas */
     grid-template-columns: 1fr; /* Una sola columna */
   }
+  .card {
+    margin-top: 15px;
+    background-color: var(--primary-color-light);
+    color: var(--text-secondary-color);
+    width: 100%;
+    max-width: 350px;
+    max-height: 350px;
+    border-radius: 8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  }
+
+  .card:hover {
+    transform: none;
+    box-shadow: none;
+  }
 }
 
 .card-img {

@@ -427,11 +427,30 @@ body.dark .switch::before {
   grid-column: span 2;
 }
 
-.map iframe {
-  border: none;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+.map {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
+
+.map:hover {
+  transform: scale(
+    1.05
+  ); /* Aumentar el tamaño al 105% cuando se pasa el mouse */
+}
+
+.map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 15px; /* Esto asegura que el contenido del iframe también tenga bordes redondeados */
+  object-fit: cover;
+  pointer-events: none;
+}
+
 /* Deslizable básico */
 .carousel {
   display: flex;
@@ -465,6 +484,16 @@ body.dark .switch::before {
   .info {
     margin-top: 10px;
   }
+  .address-map {
+    grid-template-columns: 1fr; /* Hacer que ocupen una columna en pantallas pequeñas */
+    gap: 20px; /* Ajustar el espacio entre el mapa y la dirección */
+  }
+
+  .map,
+  .address {
+    width: 100%; /* Asegurarse de que el mapa y la dirección ocupen todo el ancho */
+    height: auto; /* Ajustar la altura según el contenido */
+  }
 }
 
 /* El fondo del modal */
@@ -473,7 +502,7 @@ body.dark .switch::before {
   position: fixed;
   z-index: 1;
   left: 0;
-  top: 0;
+  top: 0%;
   width: 100%;
   height: 100%;
   background-color: var(--bg-color-modal); /* Fondo oscuro con opacidad */
@@ -483,7 +512,7 @@ body.dark .switch::before {
 /* Contenido del modal */
 .modal-content {
   background-color: var(--primary-color-light);
-  margin: 15% auto;
+  margin: 10% auto;
   padding: 20px;
   border-radius: 10px;
   width: 80%;
@@ -491,21 +520,19 @@ body.dark .switch::before {
   text-align: center;
   color: var(--text-color);
 }
-
-/* Botón de cerrar */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+.modal-content h3 {
+  font-size: 30px;
+  padding-bottom: 20px;
 }
 
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
+.modal-content p {
+  font-size: 20px;
 }
+
+.modal-content iframe {
+  border-radius: 10px;
+}
+
 .address,
 .rooms,
 .events,
@@ -556,7 +583,7 @@ body.dark .switch::before {
 
   /* Estilos para el modal en pantallas pequeñas */
   .modal {
-    display: flex; /* Cambia a flex para centrar el contenido */
+    display: none; /* Cambia a flex para centrar el contenido */
     align-items: center; /* Centra verticalmente el contenido */
     justify-content: center; /* Centra horizontalmente el contenido */
   }
@@ -565,6 +592,14 @@ body.dark .switch::before {
     margin-left: 33%;
     width: 90%; /* Ajusta el ancho del modal al 90% de la pantalla */
     max-width: 50%; /* Mantiene el ancho máximo del modal */
+  }
+
+  .modal-content h3 {
+    margin-bottom: 5px;
+    font-size: 20px;
+  }
+  .modal-content p {
+    font-size: 15px;
   }
 }
 @media (max-width: 850px) {
@@ -579,5 +614,12 @@ body.dark .switch::before {
     margin-left: 33%;
     width: 90%; /* Ajusta el ancho del modal al 90% de la pantalla */
     max-width: 50%; /* Mantiene el ancho máximo del modal */
+  }
+  .modal-content h3 {
+    margin-bottom: 10px;
+    font-size: 25px;
+  }
+  .modal-content p {
+    font-size: 15px;
   }
 }
