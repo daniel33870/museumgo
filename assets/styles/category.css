@@ -358,7 +358,7 @@ body.dark .switch::before {
   font-weight: 700;
   color: var(--text-colorr);
   transition: 0.6s;
-  text-decoration: none;
+  cursor: pointer;
 }
 
 .tag:hover {
@@ -374,7 +374,6 @@ body.dark .switch::before {
 .card-img div {
   width: 90%;
 }
-
 /*IF USING IMAGES*/
 
 /* Estilos generales para las tarjetas */
@@ -388,6 +387,7 @@ body.dark .switch::before {
   display: flex;
   flex-wrap: wrap;
   margin-top: 10px;
+  width: 100%;
 }
 
 .card {
@@ -395,7 +395,6 @@ body.dark .switch::before {
   background-color: var(--primary-color-light);
   color: var(--text-secondary-color);
   width: 100%;
-  max-width: 350px;
   max-height: 350px;
   border-radius: 8px;
   box-shadow: var(--bg-color) 0px 50px 100px -20px,
@@ -480,7 +479,8 @@ body.dark .switch::before {
 
 /* Change the .card-img div to .card-img img to use img*/
 .card-img a,
-.card-img div {
+.card-img div,
+.card-img img {
   height: 150px;
   width: 90%;
   /* Change this width here to change the width of the color/image */
@@ -581,60 +581,4 @@ body.dark .switch::before {
 /* Estilos para ocultar el loader */
 .loader-shape-3.show {
   opacity: 1; /* Oculta el loader */
-}
-
-.intro {
-  padding: 40px;
-  background-color: var(--primary-color-light); /* Usa el color ya definido */
-  text-align: center;
-  border-radius: 10px;
-  box-shadow: var(--bg-color) 0px 8px 16px;
-  margin-left: 5%;
-  max-width: 90%;
-}
-
-.intro h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--text-color); /* Usa el color de texto principal */
-  margin-bottom: 15px;
-}
-
-.intro p {
-  font-size: 1.2rem;
-  color: var(--text-secondary-color); /* Color de texto secundario */
-  line-height: 1.6;
-}
-
-.historia-mexico {
-  display: grid;
-  margin-top: 60px;
-  padding: 40px;
-  background-color: var(--primary-color-light);
-  border-radius: 10px;
-  box-shadow: var(--bg-color) 0px 8px 16px;
-  margin-left: 5%;
-  max-width: 90%;
-  align-items: center;
-  justify-content: center;
-}
-
-.historia-mexico h2 {
-  font-size: 2rem;
-  font-weight: 600;
-  color: var(--text-color);
-  margin-bottom: 20px;
-}
-
-.historia-mexico p {
-  font-size: 1.1rem;
-  color: var(--text-secondary-color);
-  line-height: 1.8;
-}
-
-.historia-mexico img {
-  margin-top: 20px;
-  max-width: 100%;
-  border-radius: 10px;
-  box-shadow: var(--bg-color-sec) 0px 4px 12px;
 }
